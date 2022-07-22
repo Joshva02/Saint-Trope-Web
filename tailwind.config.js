@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  plugins: [require("tw-elements/dist/plugin")],
   theme: {
     extend: {
       colors: {
@@ -9,6 +10,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         home: "url(/public/bghome.jpeg)",
+        wood: "url(/public/woodbg.jpeg)",
       }),
     },
   },
