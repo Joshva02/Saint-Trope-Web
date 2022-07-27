@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- ALPINE JS -->
     <script
       defer
       src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
@@ -14,12 +15,18 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgd5IzCFy27NIuEimbQRrLH2ouRb9xMOg &callback=initMap"
+      async
+      defer
+    ></script>
     <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     <title>Document</title>
   </head>
-  <body>
-    <header class="py-5 bg-black sticky top-0 z-20" x-data="{expanded: false}">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+  <body class="montserrat">
+    <!-- HEADER -->
+    <header class="bg-black sticky top-0 z-20" x-data="{expanded: false}">
+      <div class="py-5 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex items-center justify-between">
           <div class="flex-shrink-0">
             <a href="#" title="" class="flex">
@@ -93,7 +100,7 @@
             <a
               class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
               href="/src/staff.html"
-              >Staff
+              >Hosts
             </a>
             <a
               class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
@@ -105,14 +112,17 @@
           <nav
             class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10"
           >
-            <a
-              href="https://islandetickets.com/event/Sainttropez"
-              title="islandetickets"
-              class="inline-flex items-center uppercase montserrat justify-center px-5 py-2 text-base font-bold leading-7 hover:underline underline-offset-4 text-transparent bg-clip-text bg-gradient-to-r from-dark-gold to-light-gold transition-all duration-200 bg-transparent rounded-xl font-pj hover:opacity-80"
-              role="button"
+            <button
+              class="transition bg-blue-500 hover:scale-110 hover:bg-indigo-500 duration-200 relative inline-flex items-center justify-center font-bold p-0.5 mb-2 mr-2 overflow-hidden text-sm uppercase text-light-gold rounded-lg group bg-gradient-to-br from-light-gold via-yellow-200 to-dark-gold group-hover:from-dark-gold group-hover:via-yellow-200 group-hover:to-dark-gold dark:text-black dark:hover:text-gray-900"
             >
-              Buy Tickets
-            </a>
+              <span
+                class="relative px-5 py-2.5 transition duration-200 text-dark-gold hover:text-black bg-black dark:bg-dark-gold rounded-md group-hover:bg-opacity-0"
+              >
+                <a href="https://islandetickets.com/event/Sainttropez">
+                  Buy Tickets
+                </a>
+              </span>
+            </button>
           </nav>
         </div>
 
@@ -133,76 +143,77 @@
               <a
                 class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
                 href="/src/staff.html"
-                >Staff
+                >Hosts
               </a>
               <a
                 class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
                 href="/src/gallery.html"
                 >Gallery
               </a>
-              <a
-                href="https://islandetickets.com/event/Sainttropez"
-                title=""
-                class="inline-flex items-center uppercase montserrat justify-center px-5 py-2 text-base font-bold leading-7 hover:underline underline-offset-4 text-transparent bg-clip-text bg-gradient-to-r from-dark-gold to-light-gold transition-all duration-200 bg-transparent rounded-xl font-pj hover:opacity-80"
-                role="button"
-              >
-                Buy Tickets
-              </a>
             </div>
           </div>
         </nav>
       </div>
+
+      <a href="https://islandetickets.com/event/Sainttropez">
+        <div
+          class="lg:hidden py-3 bg-gradient-to-r from-light-gold to-dark-gold text-center uppercase font-bold hover:bg-opacity-80 hover:animate-pulse delay-75"
+        >
+          Buy Tickets
+        </div>
+      </a>
     </header>
+    <!-- END HEADER -->
+<div class="bg-home mx-auto py-20">
     <section class="overflow-hidden text-gray-700">
-      <div class="mx-auto bg-green-900 bg-home">
-        <div class="container px-5 mx-auto lg:pt-24 lg:px-32 py-20">
-          <div class="flex flex-wrap -m-1 md:-m-2">
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
-                />
-              </div>
-              <div class="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
-                />
-              </div>
-              <div class="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                />
-              </div>
+      <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+        <div class="flex flex-wrap -m-1 md:-m-2">
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
+              />
             </div>
-            <div class="flex flex-wrap w-1/2">
-              <div class="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
-                />
-              </div>
-              <div class="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
-                />
-              </div>
-              <div class="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  class="block object-cover object-center w-full h-full rounded-lg"
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
-                />
-              </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
+              />
             </div>
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/2">
+            <div class="w-full p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
+              />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
+              />
+            </div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img
+                alt="gallery"
+                class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
+              />
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -244,7 +255,7 @@
               title=""
               class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
             >
-              Staff
+              Hosts
             </a>
           </li>
 
@@ -302,6 +313,32 @@
         </p>
       </div>
     </footer>
+    <!-- Back to top button -->
+
+    <button
+      type="button"
+      data-mdb-ripple="true"
+      data-mdb-ripple-color="light"
+      class="p-3 bg-white text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-light-gold hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
+      id="btn-back-to-top"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        class="w-4 h-4"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+        ></path>
+      </svg>
+    </button>
+
     <!-- END FOOTER 3 -->
   </body>
+  <script src="/src/scroll.js"></script>
 </html>

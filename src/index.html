@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,16 +15,18 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgd5IzCFy27NIuEimbQRrLH2ouRb9xMOg &callback=initMap"
-      async defer>
-    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgd5IzCFy27NIuEimbQRrLH2ouRb9xMOg &callback=initMap"
+      async
+      defer
+    ></script>
 
     <title>Document</title>
   </head>
   <body class="montserrat">
     <!-- HEADER -->
-    <header class="py-5 bg-black sticky top-0 z-20" x-data="{expanded: false}">
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <header class="bg-black sticky top-0 z-20" x-data="{expanded: false}">
+      <div class="py-5 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex items-center justify-between">
           <div class="flex-shrink-0">
             <a href="#" title="" class="flex">
@@ -98,7 +100,7 @@
             <a
               class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
               href="/src/staff.html"
-              >Staff
+              >Hosts
             </a>
             <a
               class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
@@ -108,18 +110,22 @@
           </nav>
 
           <nav
-          class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10">
-          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-light-gold rounded-lg group bg-gradient-to-br from-light-gold via-yellow-200 to-dark-gold group-hover:from-dark-gold group-hover:via-yellow-200 group-hover:to-dark-gold dark:text-black dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 text-dark-gold hover:text-black bg-black dark:bg-dark-gold rounded-md group-hover:bg-opacity-0">
-              <a href="https://islandetickets.com/event/Sainttropez">
-                Buy Tickets
-              </a>
-            </span>
-          </button>
-        </div>
-      </nav>
-        </div>
+            class="hidden lg:flex lg:items-center lg:justify-end lg:space-x-10"
+          >
+            <button
+              class="transition bg-blue-500 hover:scale-110 hover:bg-indigo-500 duration-200 relative inline-flex items-center justify-center font-bold p-0.5 mb-2 mr-2 overflow-hidden text-sm uppercase text-light-gold rounded-lg group bg-gradient-to-br from-light-gold via-yellow-200 to-dark-gold group-hover:from-dark-gold group-hover:via-yellow-200 group-hover:to-dark-gold dark:text-black dark:hover:text-gray-900"
+            >
+              <span
+                class="relative px-5 py-2.5 transition duration-200 text-dark-gold hover:text-black bg-black dark:bg-dark-gold rounded-md group-hover:bg-opacity-0"
+              >
+                <a href="https://islandetickets.com/event/Sainttropez">
+                  Buy Tickets
+                </a>
+              </span>
+            </button>
           </nav>
+        </div>
+
         <nav x-show="expanded" x-collapse>
           <div class="px-1 py-8">
             <div class="grid gap-y-7">
@@ -137,7 +143,7 @@
               <a
                 class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
                 href="/src/staff.html"
-                >Staff
+                >Hosts
               </a>
               <a
                 class="active text-base montserrat uppercase bg-clip-text text-white hover:underline underline-offset-4"
@@ -146,10 +152,16 @@
               </a>
             </div>
           </div>
-      </div>
-    </div>
         </nav>
       </div>
+
+      <a href="https://islandetickets.com/event/Sainttropez">
+        <div
+          class="lg:hidden py-3 bg-gradient-to-r from-light-gold to-dark-gold text-center uppercase font-bold hover:bg-opacity-80 hover:animate-pulse delay-75"
+        >
+          Buy Tickets
+        </div>
+      </a>
     </header>
     <!-- END HEADER -->
     <div class="mx-auto bg-green-900 bg-home">
@@ -158,7 +170,6 @@
       >
         <div>
           <img class="px-16 pt-10 md:py-10" src="/public/Col1.JPG" alt="img1" />
-          
         </div>
         <div
           class="text-center py-10 px-6 flex flex-col justify-center items-center"
@@ -188,38 +199,50 @@
         </div>
       </div>
     </div>
-    <div class="px-20 bg-black">
-      <div class="max-w-7xl mx-auto text-center scroll-pb-5">
+    <div class="px-4 bg-black">
+      <div class="max-w-7xl mx-auto text-center py-16">
         <h1
-          class="text-5xl serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-gold to-light-gold uppercase text-center py-20"
+          class="text-5xl serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-dark-gold to-light-gold uppercase text-center pb-16"
         >
           Details
         </h1>
         <div class="bg-black">
           <div
-            class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-5"
+            class="px-4 mx-auto sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 md:gap-5"
           >
-          <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Anchorage,%20Hart's%20Cut+(My%20Business%20Name)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe></div>
-      <div
-      class="text-center py-20 px-5 flex flex-col justify-center items-center"
-    >
-        <p class="text-white pt-6 text-xl">
-          <span class="font-bold">Date</span> - August 20th 2022
-        </p>
-        <p class="text-white pt-6 text-xl">
-          <span class="font-bold">Dinner</span> - 6pm-10pm
-        </p>
-        <p class="text-white pt-6 text-xl">
-          <span class="font-bold">Party</span> - 10pm-2am
-        </p>
-        <p class="text-white pt-6 text-xl">
-          <span class="font-bold">Venue</span> - Anchorage on the Water
-        </p>
-      </div>
+            <div style="width: 100%">
+              <iframe
+                width="100%"
+                height="400"
+                frameborder="0"
+                scrolling="no"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=The%20Anchorage,%20Hart's%20Cut+(My%20Business%20Name)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ><a
+                  href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62725.08463575993!2d-61.62100334953246!3d10.709953495791677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c360a41250aae9d%3A0xf6400691c12b1ef!2sThe%20Anchorage!5e0!3m2!1sen!2stt!4v1658936052831!5m2!1sen!2stt"
+                  >distance maps</a
+                ></iframe
+              >
+            </div>
+            <div
+              class="text-center py-14 md:py-20 px-6 flex flex-col justify-center items-center"
+            >
+              <p class="text-white pt-6 text-xl">
+                <span class="font-bold">Date</span> - August 20th 2022
+              </p>
+              <p class="text-white pt-6 text-xl">
+                <span class="font-bold">Dinner</span> - 6pm-10pm
+              </p>
+              <p class="text-white pt-6 text-xl">
+                <span class="font-bold">Party</span> - 10pm-2am
+              </p>
+              <p class="text-white pt-6 text-xl">
+                <span class="font-bold">Venue</span> - Anchorage on the Water
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-      </div>
     <!-- <div class="px-20 bg-gradient-to-r from-dark-gold to-light-gold py-10">
       <div class="max-w-7xl mx-auto">
         <div class="">
@@ -246,110 +269,141 @@
     </div> -->
     <!-- START FOOTER 3 -->
 
-
-    <div class="bg-home flex justify-center">
-      <div class="py-20">
-    <iframe style="border-radius:12px mx-w-max mx-h-max" src="https://open.spotify.com/embed/playlist/37i9dQZF1EIWYZd09afuQv?utm_source=oembed" style="top: 0; left: 0; width: 75%; height: 75%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;">
+    <div class="bg-home mx-auto flex justify-center py-10">
+      <iframe
+        style="border-radius: 0px"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcxvFzl58uP7?utm_source=generator&theme=0"
+        width="55%"
+        height="380"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      >
       </iframe>
     </div>
-  </div>
-<!--<div style="left: 0; width: 100%; height: 450px; position: relative;"><iframe src="https://embed.music.apple.com/us/album/magical-mystery-tour/1441163490" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media;"></iframe></div>
+    <!--<div style="left: 0; width: 100%; height: 450px; position: relative;"><iframe src="https://embed.music.apple.com/us/album/magical-mystery-tour/1441163490" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media;"></iframe></div>
 -->
-  <footer
-  class="py-12 bg-gradient-to-r from-dark-gold to-light-gold sm:py-16 lg:py-20"
->
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <h1 class="serif text-center text-3xl font-bold uppercase">
-      <a href="/src/index.html"> Saint Tropez </a>
-    </h1>
-
-    <ul
-      class="flex flex-wrap items-center justify-center space-x-12 md:space-x-16 mt-14 uppercase"
+    <footer
+      class="py-12 bg-gradient-to-r from-dark-gold to-light-gold sm:py-16 lg:py-20"
     >
-      <li>
-        <a
-          href="/src/index.html"
-          title=""
-          class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
-        >
-          Home
-        </a>
-      </li>
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h1 class="serif text-center text-3xl font-bold uppercase">
+          <a href="/src/index.html"> Saint Tropez </a>
+        </h1>
 
-      <li>
-        <a
-          href="/src/menu.html"
-          title=""
-          class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
+        <ul
+          class="flex flex-wrap items-center justify-center space-x-12 md:space-x-16 mt-14 uppercase"
         >
-          Menu
-        </a>
-      </li>
+          <li>
+            <a
+              href="/src/index.html"
+              title=""
+              class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
+            >
+              Home
+            </a>
+          </li>
 
-      <li>
-        <a
-          href="/src/staff.html"
-          title=""
-          class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
-        >
-          Staff
-        </a>
-      </li>
+          <li>
+            <a
+              href="/src/menu.html"
+              title=""
+              class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
+            >
+              Menu
+            </a>
+          </li>
 
-      <li>
-        <a
-        href="/src/gallery.html"
-        title=""
-        class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
-        >
-          Gallery
-        </a>
-      </li>
-    </ul>
+          <li>
+            <a
+              href="/src/staff.html"
+              title=""
+              class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
+            >
+              Hosts
+            </a>
+          </li>
 
-    <ul class="flex items-center justify-center mt-12 space-x-3">
-      <li>
-        <a
-          href="https://www.instagram.com/sainttropeztt/"
-          target="_blank"
-          title=""
-          class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full"
-          rel="noopener"
-        >
-          <svg
-            class="w-6 h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
-            ></path>
-            <circle cx="16.806" cy="7.207" r="1.078"></circle>
-            <path
-              d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
-            ></path>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          target="_blank"
-          title=""
-          class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full"
-          rel="noopener"
-        >
-          <img class="w-6 h-6" src="/public/email.png" alt="" />
-        </a>
-      </li>
-    </ul>
+          <li>
+            <a
+              href="/src/gallery.html"
+              title=""
+              class="inline-flex text-lg font-medium text-gray-900 transition-all duration-200 transform font-pj hover:-translate-y-1 hover:opacity-80"
+            >
+              Gallery
+            </a>
+          </li>
+        </ul>
 
-    <p class="text-base font-normal text-center text-black mt-7 font-pj">
-      © Copyright 2021, All Rights Reserved
-    </p>
-  </div>
-</footer>
-<!-- END FOOTER 3 -->
+        <ul class="flex items-center justify-center mt-12 space-x-3">
+          <li>
+            <a
+              href="https://www.instagram.com/sainttropeztt/"
+              target="_blank"
+              title=""
+              class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full"
+              rel="noopener"
+            >
+              <svg
+                class="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                ></path>
+                <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                <path
+                  d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              target="_blank"
+              title=""
+              class="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 rounded-full"
+              rel="noopener"
+            >
+              <img class="w-6 h-6" src="/public/email.png" alt="" />
+            </a>
+          </li>
+        </ul>
+
+        <p class="text-base font-normal text-center text-black mt-7 font-pj">
+          © Copyright 2021, All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Back to top button -->
+
+    <button
+      type="button"
+      data-mdb-ripple="true"
+      data-mdb-ripple-color="light"
+      class="p-3 bg-white text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-light-gold hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
+      id="btn-back-to-top"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        class="w-4 h-4"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- END FOOTER 3 -->
   </body>
+  <script src="/src/scroll.js"></script>
 </html>
